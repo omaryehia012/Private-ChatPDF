@@ -49,7 +49,7 @@ def is_openai_api_key_set() -> bool:
 def main():
     if len(st.session_state) == 0:
         st.session_state["messages"] = []
-        st.session_state["pdfquery"] = Agent(OPENAI_API_KEY)
+        st.session_state["pdfquery"] = PDFQuery(OPENAI_API_KEY)
 
     st.header("ChatPDF")
 
