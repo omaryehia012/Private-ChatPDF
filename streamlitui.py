@@ -3,6 +3,8 @@ import tempfile
 import streamlit as st
 from streamlit_chat import message
 from pdfquery import PDFQuery
+from PIL import Image
+
 
 st.set_page_config(page_title="ChatPDF")
 
