@@ -84,6 +84,5 @@ def main():
     display_messages()
     st.text_input("Message", key="user_input", disabled=not is_openai_api_key_set(), on_change=process_input)
 
-
 if __name__ == "__main__":
     main()
