@@ -53,8 +53,8 @@ def main():
 
     st.header("ChatPDF")
 
-    st.subheader("Upload a document")
-    st.file_uploader(
+    st.side.subheader("Upload a document")
+    st.side.file_uploader(
         "Upload document",
         type=["pdf"],
         key="file_uploader",
