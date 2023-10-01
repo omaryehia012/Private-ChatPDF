@@ -52,7 +52,7 @@ def main():
         else:
             st.session_state["pdfquery"] = None
 
-    image = Image.open('transparent logo square kiwilitycs logo 50x50-01.png')
+    image = Image.open('transparent kiwilitycs website header.png')
     col1, col2, col3 , col4 , col5 = st.columns(5)
     with col1:
         st.write('')
