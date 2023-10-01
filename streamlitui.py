@@ -68,7 +68,7 @@ def main():
         st.write('')    
     
     st.markdown("<h2 style='text-align: center; color: gray;'>AI Assist</h2>", unsafe_allow_html=True)
-    st.markdown("<h5 style='text-align: center; color: gray ;'>ChatPDF</h5>", unsafe_allow_html=True)
+    #st.markdown("<h5 style='text-align: center; color: gray ;'>ChatPDF</h5>", unsafe_allow_html=True)
 
 
     #st.header("ChatPDF")
