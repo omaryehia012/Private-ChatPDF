@@ -47,13 +47,9 @@ def is_openai_api_key_set() -> bool:
 
 
 def main():
-    if len(st.session_state) == 0:
-        st.session_state["messages"] = []
-        st.session_state["OPENAI_API_KEY"] = os.environ.get("OPENAI_API_KEY", "")
-        if is_openai_api_key_set():
-            st.session_state["pdfquery"] = PDFQuery(st.session_state["OPENAI_API_KEY"])
-        else:
-            st.session_state["pdfquery"] = None
+    st.session_state["messages"] = []
+    st.session_state["pdfquery"] = PDFQuery(st.session_state["OPENAI_API_KEY"])
+        
 
     st.header("ChatPDF")
 
