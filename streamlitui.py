@@ -52,7 +52,24 @@ def main():
         else:
             st.session_state["pdfquery"] = None
 
-    st.header("ChatPDF")
+    image = Image.open('transparent logo square kiwilitycs logo 50x50-01.png')
+    col1, col2, col3 , col4 , col5 = st.columns(5)
+    with col1:
+        st.write('')
+    with col2:
+        st.write('')
+    with col3:
+        st.image(image,width=120)
+    with col4:
+        st.write('')
+    with col5:
+        st.write('')    
+    
+    st.markdown("<h2 style='text-align: center; color: gray;'>AI Assist</h2>", unsafe_allow_html=True)
+    st.markdown("<h5 style='text-align: center; color: gray ;'>ChatPDF</h5>", unsafe_allow_html=True)
+
+
+    #st.header("ChatPDF")
 
     st.sidebar.header("Settings")
 
