@@ -54,7 +54,9 @@ def main():
 
     st.header("ChatPDF")
 
-    if st.text_input("OpenAI API Key", value=st.session_state["OPENAI_API_KEY"], key="input_OPENAI_API_KEY", type="password"):
+    st.sidebar.header("Settings")
+
+    if st.sidebar.text_input("OpenAI API Key", value=st.session_state["OPENAI_API_KEY"], key="input_OPENAI_API_KEY", type="password"):
         if (
             len(st.session_state["input_OPENAI_API_KEY"]) > 0
             and st.session_state["input_OPENAI_API_KEY"] != st.session_state["OPENAI_API_KEY"]
@@ -66,8 +68,8 @@ def main():
             st.session_state["user_input"] = ""
             st.session_state["pdfquery"] = PDFQuery(st.session_state["OPENAI_API_KEY"])
 
-    st.subheader("Upload a document")
-    st.file_uploader(
+    st.sidebar.subheader("Upload a document")
+    st.sidebar.file_uploader(
         "Upload document",
         type=["pdf"],
         key="file_uploader",
@@ -81,9 +83,6 @@ def main():
 
     display_messages()
     st.text_input("Message", key="user_input", disabled=not is_openai_api_key_set(), on_change=process_input)
-
-    st.divider()
-    st.markdown("Source code: [Github](https://github.com/Anil-matcha/ChatPDF)")
 
 
 if __name__ == "__main__":
